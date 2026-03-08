@@ -1,0 +1,21 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch Studio (Electron + Next)",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run electron:dev",
+			"serverReadyAction": {
+				"pattern": "started server on 0.0.0.0:9002",
+				"action": "openExternally"
+			}
+		},
+		{
+			"name": "Genkit: AI Debugger",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run genkit:dev"
+		}
+	]
+}
