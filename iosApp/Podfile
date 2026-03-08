@@ -1,0 +1,7 @@
+platform :ios, '14.1'
+use_frameworks!
+
+target 'AgendaPlus' do
+  # The KMM shared module exposes a CocoaPods pod when built on macOS.
+  pod 'shared', :path => '../shared'
+end

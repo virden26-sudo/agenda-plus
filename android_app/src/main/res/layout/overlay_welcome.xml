@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp"
+            android:importantForAutofill="yes" />
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/gemini_api_key"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etPortalUrl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Portal URL 1"
+            android:inputType="textUri"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPortalUrl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Portal URL 2 (Optional)"
+            android:inputType="textUri"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPortalUrl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Portal URL 3 (Optional)"
+            android:inputType="textUri"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/add" />
+
+    </LinearLayout>
+
+</RelativeLayout>

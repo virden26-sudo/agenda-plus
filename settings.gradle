@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Agenda_plus"
+include ':shared'
+include ':android_app'
+
+// Add the Capacitor project modules
+include ':capacitor-app'
+project(':capacitor-app').projectDir = new File('android/app')
+include ':capacitor-android'
+project(':capacitor-android').projectDir = new File('node_modules/@capacitor/android/capacitor')
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('android/capacitor-cordova-android-plugins')

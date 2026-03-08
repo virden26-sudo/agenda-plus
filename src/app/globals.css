@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+.logo-text {
+  font-family: 'Comfortaa', cursive;
+  color: #1A2B48; /* The dark navy color from your text */
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon-bg {
+  background-color: #3E9389; /* The bluish-green */
+  border-radius: 12px;
+  padding: 8px;
+}
+@theme {
+  --font-body: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@utility animate-in {
+  animation-delay: 0s;
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@utility zoom-in-95 {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+@layer base {
+  html, body {
+    @apply h-full;
+  }
+}

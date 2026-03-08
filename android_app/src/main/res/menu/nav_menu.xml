@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_dashboard_empty"
+            android:title="@string/dashboard" />
+        <item
+            android:id="@+id/nav_assignments"
+            android:icon="@drawable/ic_book_check_outline"
+            android:title="@string/assignments" />
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/ic_book_open_page_variant"
+            android:title="@string/tasks" />
+        <item
+            android:id="@+id/nav_grades"
+            android:icon="@drawable/ic_cloud_sync_outline"
+            android:title="@string/grades" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_black_24dp"
+            android:title="@string/calendar" />
+        <item
+            android:id="@+id/nav_study"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="@string/study_hub" />
+        <item
+            android:id="@+id/nav_live"
+            android:icon="@drawable/ic_dots_vertical"
+            android:title="@string/live_session" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_agenda_settings"
+            android:title="@string/settings" />
+    </group>
+</menu>

@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AgendaPlus" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#008000</item>
+        <item name="colorPrimaryVariant">#006400</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#008000</item>
+        <item name="colorSecondaryVariant">#006400</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#F5F5F5</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowBackground">#F5F5F5</item>
+        <!-- Button styles -->
+        <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
+    </style>
+
+</resources>

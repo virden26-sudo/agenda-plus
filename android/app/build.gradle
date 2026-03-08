@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace = "com.virden.agendaplus"
+    compileSdk = 36
+    
+    defaultConfig {
+        applicationId "com.virden.agendaplus"
+        minSdk = 26
+        targetSdk = 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "GEMINI_API_KEY", "\"${project.findProperty("GEMINI_API_KEY")}\"")
+        aaptOptions {
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            // Default debug signing
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = true
+            shrinkResources = true
+            proguardFiles(getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro')
+        }
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '.debug'
+            signingConfig signingConfigs.debug
+        }
+    }
+    
+    compileOptions {
+        coreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+        buildConfig = true
+    }
+    
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            excludes += 'META-INF/DEPENDENCIES'
+            excludes += 'META-INF/LICENSE*'
+            excludes += 'META-INF/NOTICE*'
+            excludes += 'META-INF/*.kotlin_module'
+        }
+    }
+}
+
+dependencies {
+    // This replaces flatDir for local JARs/AARs
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    
+    implementation project(':capacitor-android')
+    implementation project(':capacitor-cordova-android-plugins')
+    implementation project(':shared')
+    
+    coreLibraryDesugaring libs.desugar.jdk.libs
+    
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.coordinatorlayout
+    implementation libs.androidx.core.splashscreen
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.drawerlayout
+    implementation libs.gson
+    implementation libs.generativeai
+    implementation libs.androidx.lifecycle.runtime.ktx
+    implementation libs.androidx.work.runtime.ktx
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    // PDF and DOCX text extraction
+    implementation libs.itext7.core
+    implementation libs.poi.ooxml
+    implementation libs.log4j.api
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied.")
+}

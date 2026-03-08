@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Agenda+</string>
+    <string name="you_example_com">you@example.com</string>
+    <string name="assignments">Assignments</string>
+    <string name="tasks">Tasks</string>
+    <string name="grades">Grades</string>
+    <string name="calendar">Calendar</string>
+    <string name="study_hub">Study Hub</string>
+    <string name="live_sessions">Live Sessions</string>
+    <string name="dashboard">Dashboard</string>
+
+    <!-- Added missing strings -->
+    <string name="aleks_button">ALEKS</string>
+    <string name="khan_academy_button">Khan Academy</string>
+    <string name="study_buddy">Study Buddy</string>
+    <string name="live_session">Live Session</string>
+    <string name="settings">Settings</string>
+    <string name="agenda_prefs">AgendaPrefs</string>
+    <string name="aleks_url">https://www.aleks.com/</string>
+    <string name="khan_academy_url">https://www.khanacademy.org/</string>
+    <string name="agenda_items">agenda_items</string>
+    <string name="portal_url_not_set">Portal URL not set</string>
+    <string name="no_agenda_data_for_study_plan">No agenda data available to generate a study plan.</string>
+    <string name="generating_study_plan">Generating study plan...</string>
+    <string name="study_plan_header">Your Study Plan</string>
+    <string name="priority_tasks_header">Priority Tasks</string>
+    <string name="study_plan_item">- %1$s on %2$s</string>
+    <string name="no_immediate_tasks">No immediate tasks to prioritize.</string>
+    <string name="upcoming_events_header">Upcoming Events</string>
+    <string name="event_item">%1$s on %2$s</string>
+    <string name="study_recommendations_header">Study Recommendations</string>
+    <string name="focus_on_one_task">Focus on one task at a time.</string>
+    <string name="take_regular_breaks">Take regular breaks to stay fresh.</string>
+    <string name="review_notes_regularly">Review your notes regularly.</string>
+    <string name="study_plan_footer">Good luck!</string>
+    <string name="study_plan_title">Generated Study Plan</string>
+    <string name="close">Close</string>
+    <string name="today_s_schedule">Today\'s Schedule</string>
+
+    <string name="please_enter_meeting_url">Please enter a meeting URL</string>
+
+    <!-- Sync from Text strings -->
+    <string name="sync_from_text_instructions">Copy and paste text to sync, or sync from your local storage or portal.</string>
+    <string name="sync_from_local_storage">Sync from Local Storage</string>
+    <string name="sync_from_portal">Sync from Portal</string>
+
+    <!-- Live Session strings -->
+    <string name="zoom">Zoom</string>
+    <string name="skype">Skype</string>
+    <string name="facebook_messenger">Facebook Messenger</string>
+    <string name="google_meet">Google Meet</string>
+    <string name="back">Back</string>
+
+    <!-- Settings strings -->
+    <string name="reset_profile">Reset Profile</string>
+    <string name="item_count_format">%d items</string>
+    <string name="gemini_api_key">AIzaSyAc-5b06tOEjZOe_PZTEQAkqdvXnYLaPb4</string>
+    <string name="add_item_title">Add Item</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="due_date">Due Date</string>
+    <string name="type">Type</string>
+    <string name="add_button">Add</string>
+    <string name="import_button">Import</string>
+    <string name="export_button">Export</string>
+    <string name="exams">Exams</string>
+    <string name="notes">Notes</string>
+    <string name="coming_soon">Coming Soon!</string>
+
+</resources>

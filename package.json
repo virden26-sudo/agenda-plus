@@ -1,0 +1,75 @@
+{
+  "name": "agenda-plus",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "next dev -p 9003",
+    "start": "next start -p 9003",
+    "build": "next build",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:9003 && npx cross-env NODE_ENV=development electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "start:app": "npm run electron:dev"
+  },
+  "build": {
+    "appId": "com.virden.agendaplus",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "assets/**/*",
+      "out/**/*",
+      "main.js",
+      "preload.js",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/appIcon.ico"
+    }
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^40.6.0",
+    "electron-builder": "^26.8.1",
+    "electron-serve": "^3.0.1",
+    "next": "^15.5.12",
+    "png-to-ico": "^3.0.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5",
+    "vercel": "^50.28.0",
+    "wait-on": "^9.0.4"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "@google/generative-ai": "^0.24.1",
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-alert-dialog": "^1.1.15",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@tailwindcss/postcss": "^4.2.0",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "date-fns": "^4.1.0",
+    "express": "^5.2.1",
+    "ics": "^3.8.1",
+    "lucide-react": "^0.575.0",
+    "multer": "^2.0.2",
+    "pdf-parse": "^2.4.5",
+    "postcss": "^8.5.6",
+    "puppeteer": "^24.37.5",
+    "react-hook-form": "^7.71.2",
+    "recharts": "^3.7.0",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.0",
+    "zod": "^4.3.6"
+  }
+}
