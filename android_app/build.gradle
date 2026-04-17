@@ -35,3 +35,7 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.generativeai)
 }
+
+dependencyLocking {
+    lockAllConfigurations()
+}
